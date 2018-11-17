@@ -1,16 +1,21 @@
 {
   "name": "react-native-whats-app-stickers",
   "version": "1.0.0",
-  "description": "",
+  "description": "create sticker packs for whatsapp with your react-native app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "whatsapp",
+    "sticker",
+    "stickers",
+    "stickerpack",
+    "pack"
   ],
-  "author": "",
-  "license": "",
+  "author": "Johannes Sorg <johannes@sorg.me>",
+  "license": "BSD",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
