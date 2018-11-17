@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNWhatsAppStickers.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNWhatsAppStickers.m */; };
+		F37CED8921A0213A003C43B8 /* WebPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7721A02139003C43B8 /* WebPManager.swift */; };
+		F37CED8A21A0213A003C43B8 /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7921A02139003C43B8 /* YYSpriteSheetImage.m */; };
+		F37CED8B21A0213A003C43B8 /* RNWhatsAppStickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7A21A02139003C43B8 /* RNWhatsAppStickers.swift */; };
+		F37CED8C21A0213A003C43B8 /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7B21A02139003C43B8 /* YYFrameImage.m */; };
+		F37CED8D21A0213A003C43B8 /* StickerPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7C21A02139003C43B8 /* StickerPack.swift */; };
+		F37CED8E21A0213A003C43B8 /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7D21A02139003C43B8 /* YYImage.m */; };
+		F37CED8F21A0213A003C43B8 /* StickerPackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED8021A0213A003C43B8 /* StickerPackManager.swift */; };
+		F37CED9021A0213A003C43B8 /* Interoperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED8221A0213A003C43B8 /* Interoperability.swift */; };
+		F37CED9121A0213A003C43B8 /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37CED8321A0213A003C43B8 /* YYAnimatedImageView.m */; };
+		F37CED9221A0213A003C43B8 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED8421A0213A003C43B8 /* Sticker.swift */; };
+		F37CED9321A0213A003C43B8 /* Limits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED8521A0213A003C43B8 /* Limits.swift */; };
+		F37CED9421A0213A003C43B8 /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F37CED8721A0213A003C43B8 /* YYImageCoder.m */; };
+		F37CED9521A0213A003C43B8 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED8821A0213A003C43B8 /* ImageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +39,25 @@
 		134814201AA4EA6300B7C361 /* libRNWhatsAppStickers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNWhatsAppStickers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNWhatsAppStickers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNWhatsAppStickers.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNWhatsAppStickers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNWhatsAppStickers.m; sourceTree = "<group>"; };
+		F37CED7621A02139003C43B8 /* RNWhatsAppStickers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNWhatsAppStickers-Bridging-Header.h"; sourceTree = "<group>"; };
+		F37CED7721A02139003C43B8 /* WebPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPManager.swift; sourceTree = "<group>"; };
+		F37CED7821A02139003C43B8 /* YYFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFrameImage.h; sourceTree = "<group>"; };
+		F37CED7921A02139003C43B8 /* YYSpriteSheetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSpriteSheetImage.m; sourceTree = "<group>"; };
+		F37CED7A21A02139003C43B8 /* RNWhatsAppStickers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNWhatsAppStickers.swift; sourceTree = "<group>"; };
+		F37CED7B21A02139003C43B8 /* YYFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFrameImage.m; sourceTree = "<group>"; };
+		F37CED7C21A02139003C43B8 /* StickerPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPack.swift; sourceTree = "<group>"; };
+		F37CED7D21A02139003C43B8 /* YYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImage.m; sourceTree = "<group>"; };
+		F37CED7E21A02139003C43B8 /* YYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImage.h; sourceTree = "<group>"; };
+		F37CED7F21A02139003C43B8 /* YYSpriteSheetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSpriteSheetImage.h; sourceTree = "<group>"; };
+		F37CED8021A0213A003C43B8 /* StickerPackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackManager.swift; sourceTree = "<group>"; };
+		F37CED8121A0213A003C43B8 /* YYAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAnimatedImageView.h; sourceTree = "<group>"; };
+		F37CED8221A0213A003C43B8 /* Interoperability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interoperability.swift; sourceTree = "<group>"; };
+		F37CED8321A0213A003C43B8 /* YYAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAnimatedImageView.m; sourceTree = "<group>"; };
+		F37CED8421A0213A003C43B8 /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		F37CED8521A0213A003C43B8 /* Limits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limits.swift; sourceTree = "<group>"; };
+		F37CED8621A0213A003C43B8 /* YYImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCoder.h; sourceTree = "<group>"; };
+		F37CED8721A0213A003C43B8 /* YYImageCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCoder.m; sourceTree = "<group>"; };
+		F37CED8821A0213A003C43B8 /* ImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +84,26 @@
 			children = (
 				B3E7B5881CC2AC0600A0062D /* RNWhatsAppStickers.h */,
 				B3E7B5891CC2AC0600A0062D /* RNWhatsAppStickers.m */,
+				F37CED8821A0213A003C43B8 /* ImageData.swift */,
+				F37CED8221A0213A003C43B8 /* Interoperability.swift */,
+				F37CED8521A0213A003C43B8 /* Limits.swift */,
+				F37CED7A21A02139003C43B8 /* RNWhatsAppStickers.swift */,
+				F37CED8421A0213A003C43B8 /* Sticker.swift */,
+				F37CED7C21A02139003C43B8 /* StickerPack.swift */,
+				F37CED8021A0213A003C43B8 /* StickerPackManager.swift */,
+				F37CED7721A02139003C43B8 /* WebPManager.swift */,
+				F37CED8121A0213A003C43B8 /* YYAnimatedImageView.h */,
+				F37CED8321A0213A003C43B8 /* YYAnimatedImageView.m */,
+				F37CED7821A02139003C43B8 /* YYFrameImage.h */,
+				F37CED7B21A02139003C43B8 /* YYFrameImage.m */,
+				F37CED7E21A02139003C43B8 /* YYImage.h */,
+				F37CED7D21A02139003C43B8 /* YYImage.m */,
+				F37CED8621A0213A003C43B8 /* YYImageCoder.h */,
+				F37CED8721A0213A003C43B8 /* YYImageCoder.m */,
+				F37CED7F21A02139003C43B8 /* YYSpriteSheetImage.h */,
+				F37CED7921A02139003C43B8 /* YYSpriteSheetImage.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				F37CED7621A02139003C43B8 /* RNWhatsAppStickers-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +138,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -112,7 +164,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37CED8E21A0213A003C43B8 /* YYImage.m in Sources */,
+				F37CED9321A0213A003C43B8 /* Limits.swift in Sources */,
+				F37CED9021A0213A003C43B8 /* Interoperability.swift in Sources */,
+				F37CED8D21A0213A003C43B8 /* StickerPack.swift in Sources */,
+				F37CED8F21A0213A003C43B8 /* StickerPackManager.swift in Sources */,
+				F37CED9421A0213A003C43B8 /* YYImageCoder.m in Sources */,
+				F37CED8A21A0213A003C43B8 /* YYSpriteSheetImage.m in Sources */,
+				F37CED8C21A0213A003C43B8 /* YYFrameImage.m in Sources */,
+				F37CED9221A0213A003C43B8 /* Sticker.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNWhatsAppStickers.m in Sources */,
+				F37CED8921A0213A003C43B8 /* WebPManager.swift in Sources */,
+				F37CED8B21A0213A003C43B8 /* RNWhatsAppStickers.swift in Sources */,
+				F37CED9121A0213A003C43B8 /* YYAnimatedImageView.m in Sources */,
+				F37CED9521A0213A003C43B8 /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,32 +268,41 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNWhatsAppStickers;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		58B511F11A9E6C8500147676 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNWhatsAppStickers;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNWhatsAppStickers-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNWhatsAppStickers;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNWhatsAppStickers-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
