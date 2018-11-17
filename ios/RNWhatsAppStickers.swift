@@ -10,23 +10,53 @@ import Foundation
 
 @objc(RNWhatsAppStickers)
 class RNWhatsAppStickers: NSObject {
-    @objc func addStickers(name: String, location: String, date: NSNumber) -> Void {
-        NSLog("%@ %@ %S", name, location, date);
+    var stickerPack: StickerPack!;
+   
+    @objc
+    func createStickerPack(_ config: NSDictionary,
+                           resolver resolve: RCTPromiseResolveBlock,
+                           rejecter reject: RCTPromiseRejectBlock) -> Void {
+        do {
+            stickerPack = try StickerPack(identifier: "identifier",
+                            name: RCTConvert.nsString(config["name"]),
+                            publisher: RCTConvert.nsString(config["publisher"]),
+                            trayImageFileName: RCTConvert.nsString(config["trayImageFileName"]),
+                            publisherWebsite: RCTConvert.nsString(config["publisherWebsite"]),
+                            privacyPolicyWebsite: RCTConvert.nsString(config["privacyPolicyWebsite"]),
+                            licenseAgreementWebsite: RCTConvert.nsString(config["licenseAgreementWebsite"]))
+            resolve("success")
+
+        } catch {
+            NSLog("\(error)")
+            reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error);
+        }
     }
     
-    @objc func createStickerPack(name: String, location: String, date: NSNumber) -> Void {
-        NSLog("%@ %@ %S", name, location, date);
+    @objc
+    func addSticker(_ fileName: String,
+                    emojis: Array<String>,
+                    resolver resolve: RCTPromiseResolveBlock,
+                    rejecter reject: RCTPromiseRejectBlock){
         do {
-            let stickerPack = try StickerPack(identifier: "identifier",
-                            name: "sticker pack name",
-                            publisher: "sticker pack publisher",
-                            trayImageFileName: "tray image file name",
-                            publisherWebsite: "publisher website URL",
-                            privacyPolicyWebsite: "privacy policy website URL",
-                            licenseAgreementWebsite: "license agreement website URL")
+            try stickerPack.addSticker(contentsOfFile: fileName,
+                                   emojis: emojis)
+            resolve("success")
         } catch {
-            NSLog("error");
-            // TODO error handling
+            NSLog("\(error)")
+            reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error);
+        }
+    }
+    
+    @objc
+    func send(_ resolve: @escaping RCTPromiseResolveBlock,
+              rejecter reject: @escaping RCTPromiseRejectBlock) {
+        stickerPack.sendToWhatsApp { completed in
+            if(completed){
+                resolve("success")
+            }else{
+                let error = NSError(domain: "", code: 200, userInfo: nil)
+                reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error);
+            }
         }
     }
     

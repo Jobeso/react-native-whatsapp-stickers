@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNWhatsAppStickers.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNWhatsAppStickers.m */; };
+		F376EF0F21A0B5E400F50A40 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F376EF0E21A0B5E400F50A40 /* WebP.framework */; };
 		F37CED8921A0213A003C43B8 /* WebPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7721A02139003C43B8 /* WebPManager.swift */; };
 		F37CED8A21A0213A003C43B8 /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7921A02139003C43B8 /* YYSpriteSheetImage.m */; };
 		F37CED8B21A0213A003C43B8 /* RNWhatsAppStickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37CED7A21A02139003C43B8 /* RNWhatsAppStickers.swift */; };
@@ -37,8 +38,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNWhatsAppStickers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNWhatsAppStickers.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* RNWhatsAppStickers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNWhatsAppStickers.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNWhatsAppStickers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNWhatsAppStickers.m; sourceTree = "<group>"; };
+		F376EF0E21A0B5E400F50A40 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebP.framework; path = Frameworks/WebP.framework; sourceTree = "<group>"; };
 		F37CED7621A02139003C43B8 /* RNWhatsAppStickers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNWhatsAppStickers-Bridging-Header.h"; sourceTree = "<group>"; };
 		F37CED7721A02139003C43B8 /* WebPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPManager.swift; sourceTree = "<group>"; };
 		F37CED7821A02139003C43B8 /* YYFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFrameImage.h; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F376EF0F21A0B5E400F50A40 /* WebP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +84,6 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B3E7B5881CC2AC0600A0062D /* RNWhatsAppStickers.h */,
 				B3E7B5891CC2AC0600A0062D /* RNWhatsAppStickers.m */,
 				F37CED8821A0213A003C43B8 /* ImageData.swift */,
 				F37CED8221A0213A003C43B8 /* Interoperability.swift */,
@@ -104,6 +105,7 @@
 				F37CED7921A02139003C43B8 /* YYSpriteSheetImage.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				F37CED7621A02139003C43B8 /* RNWhatsAppStickers-Bridging-Header.h */,
+				F376EF0E21A0B5E400F50A40 /* WebP.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,7 +270,12 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -289,7 +296,12 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

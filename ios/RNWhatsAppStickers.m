@@ -1,7 +1,22 @@
-#import <React/RCTBridgeModule.h>
+#import "React/RCTBridgeModule.h"
 
 @interface RCT_EXTERN_MODULE(RNWhatsAppStickers, NSObject)
 
-RCT_EXTERN_METHOD(addEvent:(NSString *)name location:(NSString *)location date:(nonnull NSNumber *)date)
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
+
+RCT_EXTERN_METHOD(createStickerPack:(NSDictionary *)config
+                  resolver: (RCTPromiseResolveBlock)resolve
+                  rejecter: (RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(addSticker:(NSString *)fileName
+                  emojis:(NSArray *)emojis
+                  resolver: (RCTPromiseResolveBlock)resolve
+                  rejecter: (RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(send:(RCTPromiseResolveBlock)resolve
+                  rejecter: (RCTPromiseRejectBlock)reject)
 
 @end
