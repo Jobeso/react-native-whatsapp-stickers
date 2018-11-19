@@ -56,17 +56,6 @@ $(inherited)
 $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
 ```
 
-<!-- ### WebP Framework
-
-1. Add the `WebP.framework` from `your-project/node_modules/react-native-whats-app-stickers/iOS/Framework/WebP.framework` to `Linked Frameworks and Libraries` under `General`.
-2. Add the following to `Framework Search Paths` under `Build Settings` section `Search Paths`. It's improtant to set it to `recursive`.
-
-```
-$(inherited)
-$(PROJECT_DIR)
-$(SRCROOT)/../node_modules/react-native-whats-app-stickers/ios
-``` -->
-
 #### Add frameworks 
 Add the following frameworks under `General -> Linked Frameworks and Libraries`
 
@@ -91,7 +80,7 @@ libz.tbd
 - Add the following to your `Info.plist`
 ```
 <key>LSApplicationQueriesSchemes</key>
-	<array>
+  <array>
   <string>whatsapp</string>
 </array>
 ```
@@ -135,7 +124,7 @@ RNWhatsAppStickers.addSticker('stickername.png', ['😎'])
   .catch(e => console.log(e))
 ```
 
-2. Send to WhatsApp
+3. Send to WhatsApp
 ```javascript
 RNWhatsAppStickers.send()
   .then(() => console.log('success'))
