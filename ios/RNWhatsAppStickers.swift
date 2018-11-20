@@ -28,7 +28,7 @@ class RNWhatsAppStickers: NSObject {
 
         } catch {
             NSLog("\(error)")
-            reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error);
+            reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error)
         }
     }
     
@@ -43,7 +43,7 @@ class RNWhatsAppStickers: NSObject {
             resolve("success")
         } catch {
             NSLog("\(error)")
-            reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error);
+            reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error)
         }
     }
     
@@ -55,7 +55,7 @@ class RNWhatsAppStickers: NSObject {
                 resolve("success")
             }else{
                 let error = NSError(domain: "", code: 200, userInfo: nil)
-                reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error);
+                reject("RNWhatsAppStickers", "an unknown error occured for whats app stickers", error)
             }
         }
     }
