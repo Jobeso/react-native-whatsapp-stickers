@@ -1,11 +1,11 @@
 # RNWhatsAppStickers
 ## Getting started
 
-`$ npm install react-native-whats-app-stickers --save`
+`$ npm install react-native-whatsapp-stickers --save`
 
 or
 
-`$ yarn add react-native-whats-app-stickers`
+`$ yarn add react-native-whatsapp-stickers`
 
 ## Installation
 
@@ -14,14 +14,14 @@ or
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-whats-app-stickers`
+`$ react-native link react-native-whatsapp-stickers`
 
 ### Manual installation
 
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-whats-app-stickers` and add `RNWhatsAppStickers.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-whatsapp-stickers` and add `RNWhatsAppStickers.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNWhatsAppStickers.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)
 
@@ -34,12 +34,12 @@ or
 
 2. Append the following lines to `android/settings.gradle`:
    ```
-   include ':react-native-whats-app-stickers'
-   project(':react-native-whats-app-stickers').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-whats-app-stickers/android')
+   include ':react-native-whatsapp-stickers'
+   project(':react-native-whatsapp-stickers').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-whatsapp-stickers/android')
    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
    ```
-     compile project(':react-native-whats-app-stickers')
+     compile project(':react-native-whatsapp-stickers')
    ```
 
 ## Integration
@@ -73,7 +73,7 @@ libz.tbd
 #### integrate WebP Framework
 1. click on the + to add a new framework to `General -> Linked Frameworks and Libraries`
 2. click on `Add other...`
-3. navigate to `your-project/node_modules/react-native-whats-app-stickers/iOS/Frameworks/`
+3. navigate to `your-project/node_modules/react-native-whatsapp-stickers/iOS/Frameworks/`
 4. select `WebP.framework` and click open
 
 #### Info.plist
@@ -99,7 +99,7 @@ libz.tbd
 
 1. Create a sticker pack
 ```javascript
-import RNWhatsAppStickers from "react-native-whats-app-stickers"
+import RNWhatsAppStickers from "react-native-whatsapp-stickers"
 
 cosnt config = {
   identifier: '',
@@ -135,7 +135,7 @@ RNWhatsAppStickers.send()
 
 #### App.js
 ```javascript
-import RNWhatsAppStickers from "react-native-whats-app-stickers"
+import RNWhatsAppStickers from "react-native-whatsapp-stickers"
 import { stickerConfig } from "./stickerConfig"
 
 const { stickers, ...packConfig } = stickerConfig

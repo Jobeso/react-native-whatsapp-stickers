@@ -1,11 +1,11 @@
 {
-  "name": "react-native-whats-app-stickers",
+  "name": "react-native-whatsapp-stickers",
   "version": "1.0.0",
   "description": "create sticker packs for whatsapp with your react-native app",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jobeso/react-native-whats-app-stickers"
+    "url": "https://github.com/Jobeso/react-native-whatsapp-stickers"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
