@@ -1,6 +1,13 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.reactlibrary">
+package="com.jobeso.RNWhatsAppStickers">
+<application>
+    <provider
+        android:name=".StickerContentProvider"
+        android:authorities="${applicationId}.stickercontentprovider"
+        android:enabled="true"
+        android:exported="true"
+        android:readPermission="com.whatsapp.sticker.READ" />
 
+</application>
 </manifest>
-  
