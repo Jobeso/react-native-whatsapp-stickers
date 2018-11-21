@@ -93,9 +93,71 @@ libz.tbd
 
 **Done 🎉**
 
+### Android
+
+1. Create a `contents.json` file in `yourproject -> android -> app -> src -> main -> assets` following the following scheme.
+**Improtant! Including dots in the identifier is causing troubles.**
+```json
+{
+  "android_play_store_link": "https://play.google.com/store/apps/details?id=com.myapp",
+  "ios_app_store_link": "https://itunes.apple.com/app/myapp/id123456",
+  "sticker_packs": [
+    {
+      "identifier": "myprojectstickers",
+      "name": "MyProject Stickers",
+      "publisher": "John Doe",
+      "tray_image_file": "tray_icon.png",
+      "publisher_email": "contact@myproject.com",
+      "publisher_website": "https://myproject.com",
+      "privacy_policy_website": "https://myproject.com/legal",
+      "license_agreement_website": "https://myproject.com/license",
+      "stickers": [
+        {
+          "image_file": "01_sticker.webp",
+          "emojis": ["✌️"]
+        },
+        {
+          "image_file": "02_sticker.webp",
+          "emojis": ["😍","😻"]
+        },
+        {
+          "image_file": "03_sticker.webp",
+          "emojis": ["😎"],
+        },
+      ]
+    }
+  ]
+}
+```
+
+2. Place the WebP images in a folder with **with the same name** that you defined as `identifier` in the object above under the same directory. So your `assets` folder has the following structure:
+
+```
+assets
++-- contents.json
++-- identifier
+|   +-- 01_sticker.webp
+|   +-- 02_sticker.webp
+|   +-- 03_sticker.webp
+```
+
+3. Add `noCompress` to your app `build.gradle` in `yourproject -> android -> app`
+```gradle
+android {
+    ...
+    aaptOptions {
+        noCompress "webp"
+    }
+    ...
+```
+
+**Done 🎉**
+
 ## Usage
 
 ### Methods
+
+#### iOS
 
 1. Create a sticker pack
 ```javascript
@@ -131,10 +193,21 @@ RNWhatsAppStickers.send()
   .catch(e => console.log(e))
 ```
 
+#### Android
+You are already good to go with the sticker pack creation if you followed the `Integration` part.
+
+1. Send to WhatsApp where `name` and `identifier` represent the values you defined in `contents.json`
+```javascript
+RNWhatsAppStickers.send('identifier', 'name')
+  .then(() => console.log('success'))
+  .catch(e => console.log(e))
+```
+
 ### Example
 
 #### App.js
 ```javascript
+import { Platform } from 'react-native';
 import RNWhatsAppStickers from "react-native-whatsapp-stickers"
 import { stickerConfig } from "./stickerConfig"
 
@@ -149,12 +222,26 @@ RNWhatsAppStickers.createStickerPack(packConfig)
     Promise.all(promises).then(() => RNWhatsAppStickers.send())
   })
   .catch(e => console.log(e))
+
+  if (Platform.OS === 'ios') {
+    RNWhatsAppStickers.createStickerPack(packConfig)
+      .then(() => {
+        const promises = stickers.map(item =>
+          RNWhatsAppStickers.addSticker(item.fileName, item.emojis)
+        )
+        Promise.all(promises).then(() => RNWhatsAppStickers.send())
+      })
+      .catch(e => console.log(e))
+  } else {
+    RNWhatsAppStickers.send('myprojectstickers', 'MyProject Stickers')
+      .catch(e => console.log(e))
+  }
 ```
 
 #### stickerConfig.js
 ```javascript
 export const stickerConfig = {
-  identifier: 'com.myproject.app.stickers',
+  identifier: 'myprojectstickers',
   name: 'MyProject Stickers',
   publisher: 'John Doe',
   trayImageFileName: 'tray_icon.png',
@@ -175,8 +262,10 @@ export const stickerConfig = {
       fileName: '03_sticker.png',
       emojis: ['😎'],
     },
+  ]
+}
 ```
 
 ## Roadmap
-- Android support
 - Method to check if WhatsApp is installed
+- Consistend react-native api
