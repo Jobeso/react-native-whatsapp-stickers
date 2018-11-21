@@ -74,7 +74,7 @@ libz.tbd
 1. click on the + to add a new framework to `General -> Linked Frameworks and Libraries`
 2. click on `Add other...`
 3. navigate to `your-project/node_modules/react-native-whatsapp-stickers/iOS/Frameworks/`
-4. select `WebP.framework` and click open
+4. select `WebP.framework` and click `Open`
 
 #### Info.plist
 - Add the following to your `Info.plist`
@@ -89,7 +89,7 @@ libz.tbd
 1. make sure they follow the guidelines from WhatsApp
 2. Put the images somewhere in your project directory
 3. drag and drop them into your XCode Project (recommended to a new folder)
-4. check `Copy Items If Needed` on the dialogue that pops up
+4. check `Copy Items If Needed` in the dialogue that pops up and click `Finish`
 
 **Done 🎉**
 
@@ -207,35 +207,25 @@ RNWhatsAppStickers.send('identifier', 'name')
 
 #### App.js
 ```javascript
-import { Platform } from 'react-native';
+import { Platform } from "react-native";
 import RNWhatsAppStickers from "react-native-whatsapp-stickers"
 import { stickerConfig } from "./stickerConfig"
 
 const { stickers, ...packConfig } = stickerConfig
 
-RNWhatsAppStickers.createStickerPack(packConfig)
-  .then(() => {
-    const promises = stickers.map(item =>
-      RNWhatsAppStickers.addSticker(item.fileName, item.emojis)
-    )
-
-    Promise.all(promises).then(() => RNWhatsAppStickers.send())
-  })
-  .catch(e => console.log(e))
-
-  if (Platform.OS === 'ios') {
-    RNWhatsAppStickers.createStickerPack(packConfig)
-      .then(() => {
-        const promises = stickers.map(item =>
-          RNWhatsAppStickers.addSticker(item.fileName, item.emojis)
-        )
-        Promise.all(promises).then(() => RNWhatsAppStickers.send())
-      })
-      .catch(e => console.log(e))
-  } else {
-    RNWhatsAppStickers.send('myprojectstickers', 'MyProject Stickers')
-      .catch(e => console.log(e))
-  }
+if (Platform.OS === 'ios') {
+  RNWhatsAppStickers.createStickerPack(packConfig)
+    .then(() => {
+      const promises = stickers.map(item =>
+        RNWhatsAppStickers.addSticker(item.fileName, item.emojis)
+      )
+      Promise.all(promises).then(() => RNWhatsAppStickers.send())
+    })
+    .catch(e => console.log(e))
+} else {
+  RNWhatsAppStickers.send('myprojectstickers', 'MyProject Stickers')
+    .catch(e => console.log(e))
+}
 ```
 
 #### stickerConfig.js
