@@ -257,5 +257,5 @@ export const stickerConfig = {
 ```
 
 ## Roadmap
-- Method to check if WhatsApp is installed
+- Native implementation of method to check if WhatsApp is installed
 - Consistend react-native api
