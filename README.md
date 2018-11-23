@@ -157,6 +157,13 @@ android {
 
 ### Methods
 
+Check if WhatsApp is available
+```javascript
+RNWhatsAppStickers.isWhatsAppAvailable()
+  .then(isWhatsAppAvailable => console.log('available:', isWhatsAppAvailable))
+  .catch(e => console.log(e))
+```
+
 #### iOS
 
 1. Create a sticker pack
@@ -213,19 +220,26 @@ import { stickerConfig } from "./stickerConfig"
 
 const { stickers, ...packConfig } = stickerConfig
 
-if (Platform.OS === 'ios') {
-  RNWhatsAppStickers.createStickerPack(packConfig)
-    .then(() => {
-      const promises = stickers.map(item =>
-        RNWhatsAppStickers.addSticker(item.fileName, item.emojis)
-      )
-      Promise.all(promises).then(() => RNWhatsAppStickers.send())
-    })
-    .catch(e => console.log(e))
-} else {
-  RNWhatsAppStickers.send('myprojectstickers', 'MyProject Stickers')
-    .catch(e => console.log(e))
-}
+RNWhatsAppStickers.isWhatsAppAvailable()
+  .then(isWhatsAppAvailable => {
+    if (isWhatsAppAvailable) {
+      if (Platform.OS === 'ios') {
+        return RNWhatsAppStickers.createStickerPack(packConfig)
+          .then(() => {
+            const promises = stickers.map(item =>
+              RNWhatsAppStickers.addSticker(item.fileName, item.emojis)
+            )
+            Promise.all(promises).then(() => RNWhatsAppStickers.send())
+          })
+          .catch(e => console.log(e))
+      }
+
+      return RNWhatsAppStickers.send('myprojectstickers', 'MyProject Stickers')
+    }
+
+    return undefined
+  })
+  .catch(e => console.log(e))
 ```
 
 #### stickerConfig.js
