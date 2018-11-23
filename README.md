@@ -122,8 +122,8 @@ libz.tbd
         },
         {
           "image_file": "03_sticker.webp",
-          "emojis": ["😎"],
-        },
+          "emojis": ["😎"]
+        }
       ]
     }
   ]
@@ -250,8 +250,8 @@ export const stickerConfig = {
     },
     {
       fileName: '03_sticker.png',
-      emojis: ['😎'],
-    },
+      emojis: ['😎']
+    }
   ]
 }
 ```
