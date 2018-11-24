@@ -44,6 +44,9 @@ or
 
 ## Integration
 
+**Important**
+Please make sure you follow the requirements for sticker packs from WhatsApp. You can find them [here for iOS](https://github.com/WhatsApp/stickers/tree/master/iOS#sticker-art-and-app-requirements) and [here for Android](https://github.com/WhatsApp/stickers/tree/master/Android#sticker-art-and-app-requirements).
+
 ### iOS
 
 #### Swift
