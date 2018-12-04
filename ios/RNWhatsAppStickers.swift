@@ -17,7 +17,7 @@ class RNWhatsAppStickers: NSObject {
                            resolver resolve: RCTPromiseResolveBlock,
                            rejecter reject: RCTPromiseRejectBlock) -> Void {
         do {
-            stickerPack = try StickerPack(identifier: "identifier",
+            stickerPack = try StickerPack(identifier: RCTConvert.nsString(config["identifier"]),
                             name: RCTConvert.nsString(config["name"]),
                             publisher: RCTConvert.nsString(config["publisher"]),
                             trayImageFileName: RCTConvert.nsString(config["trayImageFileName"]),
