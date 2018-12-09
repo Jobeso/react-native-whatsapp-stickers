@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 class ContentFileParser {
-
     private static final int LIMIT_EMOJI_COUNT = 2;
 
     @NonNull
