@@ -78,6 +78,7 @@ libz.tbd
 2. click on `Add other...`
 3. navigate to `your-project/node_modules/react-native-whatsapp-stickers/iOS/Frameworks/`
 4. select `WebP.framework` and click `Open`
+5. add `"$(SRCROOT)/../node_modules/react-native-whatsapp-stickers/ios"` with `recursive` in `Build Settings -> Framework Search Paths`
 
 #### Info.plist
 - Add the following to your `Info.plist`
@@ -173,7 +174,7 @@ RNWhatsAppStickers.isWhatsAppAvailable()
 ```javascript
 import RNWhatsAppStickers from "react-native-whatsapp-stickers"
 
-cosnt config = {
+const config = {
   identifier: '',
   name: '',
   publisher: '',

@@ -4,6 +4,7 @@
     "plugins": ["react", "jsx-a11y", "import", "prettier"],
     "rules": {
         "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export": 0,
         "func-names": 0,
         "import/extensions": 0,
         "import/no-named-as-default": 0,
@@ -16,6 +17,8 @@
         "no-script-url": 0,
         "no-unused-vars": 1,
         "react/no-did-update-set-state": 0,
+        "react/jsx-filename-extension": 0,
+        "react/prop-types": 0,
         "spaced-comment": 0
     }
 }
