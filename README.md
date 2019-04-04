@@ -274,6 +274,17 @@ export const stickerConfig = {
 }
 ```
 
+## Troubleshooting
+<details>
+  <summary>ld: warning: Could not find auto-linked library 'swiftFoundation'</summary>
+  
+  - Create an empty swift file in your project
+
+  `xCode -> Click File -> new File -> empty.swift`
+
+  **Important** Click yes when it asks for creating bridge-headers
+</details>
+
 ## Roadmap
 - Native implementation of method to check if WhatsApp is installed
 - Consistend react-native api
