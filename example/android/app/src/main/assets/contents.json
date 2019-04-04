@@ -1,0 +1,30 @@
+{
+  "android_play_store_link": "https://play.google.com/store/apps/details?id=com.myapp",
+  "ios_app_store_link": "https://itunes.apple.com/app/myapp/id123456",
+  "sticker_packs": [
+    {
+      "identifier": "myprojectstickers",
+      "name": "MyProject Stickers",
+      "publisher": "John Doe",
+      "tray_image_file": "tray_Cuppy.png",
+      "publisher_email": "xyz@myproject.xy",
+      "publisher_website": "https://github.com/Jobeso/react-native-whatsapp-stickers",
+      "privacy_policy_website": "https://github.com/Jobeso/react-native-whatsapp-stickers",
+      "license_agreement_website": "https://github.com/Jobeso/react-native-whatsapp-stickers/blob/master/LICENSE",
+      "stickers": [
+        {
+          "image_file": "01_Cuppy_smile.webp",
+          "emojis": ["☕", "🙂"]
+        },
+        {
+          "image_file": "02_Cuppy_lol.webp",
+          "emojis": ["😄", "😀"]
+        },
+        {
+          "image_file": "03_Cuppy_rofl.webp",
+          "emojis": ["😆", "😂"]
+        }
+      ]
+    }
+  ]
+}
