@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "postinstall": "rm -rf node_modules/react-native-whatsapp-stickers/example",
     "run:packager": "node node_modules/react-native/local-cli/cli.js start",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
@@ -10,7 +11,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.3",
-    "react-native-whatsapp-stickers": "^1.2.3"
+    "react-native-whatsapp-stickers": "file:.."
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
