@@ -4269,9 +4269,8 @@ react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
 
-react-native-whatsapp-stickers@^1.2.3:
+"react-native-whatsapp-stickers@file:..":
   version "1.2.3"
-  resolved "https://registry.yarnpkg.com/react-native-whatsapp-stickers/-/react-native-whatsapp-stickers-1.2.3.tgz#576a2ca5d47cf8a390f9ad2dee47610aa5cea0d7"
 
 react-native@0.59.3:
   version "0.59.3"
