@@ -20,15 +20,15 @@ Pod::Spec.new do |s|
 
   s.dependency "React"
 
-  s.ios.vendored_frameworks = 'WebP/WebP.framework'
+  s.ios.vendored_frameworks = "**/WebP.framework"
 
-  s.ios.framework = "UIKit"
-  s.ios.framework = "CoreFoundation"
-  s.ios.framework = "QuartzCore"
-  s.ios.framework = "AssetsLibrary"
-  s.ios.framework = "ImageIO"
-  s.ios.framework = "Accelerate"
-  s.ios.framework = "MobileCoreServices"
+  s.framework = "UIKit"
+  s.framework = "CoreFoundation"
+  s.framework = "QuartzCore"
+  s.framework = "AssetsLibrary"
+  s.framework = "ImageIO"
+  s.framework = "Accelerate"
+  s.framework = "MobileCoreServices"
 
   s.library = 'z'
 end
