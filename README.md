@@ -7,44 +7,10 @@ or
 
 `$ yarn add react-native-whatsapp-stickers`
 
-## Installation
-
-1. Either choose `Mostly automatic installation` or `Manual installation`
-2. Follow the `Integration` guide
-
-### Mostly automatic installation
-
-`$ react-native link react-native-whatsapp-stickers`
-
-### Manual installation
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-whatsapp-stickers` and add `RNWhatsAppStickers.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNWhatsAppStickers.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-
-- Add `import com.jobeso.RNWhatsAppStickers.RNWhatsAppStickersPackage;` to the imports at the top of the file
-- Add `new RNWhatsAppStickersPackage()` to the list returned by the `getPackages()` method
-
-2. Append the following lines to `android/settings.gradle`:
-   ```
-   include ':react-native-whatsapp-stickers'
-   project(':react-native-whatsapp-stickers').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-whatsapp-stickers/android')
-   ```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-   ```
-     compile project(':react-native-whatsapp-stickers')
-   ```
-
 ## Integration
 
-**Important**
+For React Native versions < 0.60 use version 1.+ of this library and checkout the corresponding README file.
+
 Please make sure you follow the requirements for sticker packs from WhatsApp. You can find them [here for iOS](https://github.com/WhatsApp/stickers/tree/master/iOS#sticker-art-and-app-requirements) and [here for Android](https://github.com/WhatsApp/stickers/tree/master/Android#sticker-art-and-app-requirements).
 
 ### iOS
@@ -58,27 +24,6 @@ Please make sure you follow the requirements for sticker packs from WhatsApp. Yo
 $(inherited)
 $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
 ```
-
-#### Add frameworks 
-Add the following frameworks under `General -> Linked Frameworks and Libraries`
-
-```
-UIKit
-CoreFoundation
-QuartzCore
-AssetsLibrary
-ImageIO
-Accelerate
-MobileCoreServices
-libz.tbd
-```
-
-#### integrate WebP Framework
-1. click on the + to add a new framework to `General -> Linked Frameworks and Libraries`
-2. click on `Add other...`
-3. navigate to `your-project/node_modules/react-native-whatsapp-stickers/iOS/Frameworks/`
-4. select `WebP.framework` and click `Open`
-5. add `"$(SRCROOT)/../node_modules/react-native-whatsapp-stickers/ios"` with `recursive` in `Build Settings -> Framework Search Paths`
 
 #### Info.plist
 - Add the following to your `Info.plist`
