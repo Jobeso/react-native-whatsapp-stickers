@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React"
-  s.dependency "libwebp"
+
+  s.ios.vendored_frameworks = 'WebP/WebP.framework'
 
   s.ios.framework = "UIKit"
   s.ios.framework = "CoreFoundation"
@@ -28,5 +29,6 @@ Pod::Spec.new do |s|
   s.ios.framework = "ImageIO"
   s.ios.framework = "Accelerate"
   s.ios.framework = "MobileCoreServices"
-  s.ios.framework = "libz.tbd"
+
+  s.library = 'z'
 end
