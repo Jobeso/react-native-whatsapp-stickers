@@ -44,3 +44,5 @@ buck-out/
 \.buckd/
 *.keystore
       
+.project
+org.eclipse.buildship.core.prefs
