@@ -32,5 +32,5 @@ Pod::Spec.new do |s|
 
   s.library = 'z'
 
-  s.swift_version = '4.0'
+  s.swift_version = '4.2'
 end
