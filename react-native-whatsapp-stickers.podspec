@@ -31,4 +31,6 @@ Pod::Spec.new do |s|
   s.framework = "MobileCoreServices"
 
   s.library = 'z'
+
+  s.swift_version = '4.0'
 end
